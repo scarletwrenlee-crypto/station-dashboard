@@ -63,15 +63,16 @@ export default function StationList() {
   const textColors = ['text-[#c0c0c0]', 'text-[#86868b]', 'text-[#6b6b6b]', 'text-white', 'text-white']
   const selectedData = selectedDate ? dailyTotalsMap[selectedDate] : null
 
-  // Top 5 by per-gun yesterday
+  // Top 5 by real API cumulative per-gun (totalPowerConsumption / total_piles)
   const topStations = stations
     .map(s => {
-      const stat = yesterdayStats.find((d: any) => d.station_id === s.id)
-      const perGun = stat && s.total_piles > 0 ? (stat.total_kwh / s.total_piles).toFixed(1) : '0'
-      return { ...s, yesterdayPerGun: parseFloat(perGun), yesterdayKwh: stat?.total_kwh || 0 }
+      const realData = realTotals[s.name]
+      const totalKwh = realData?.total_kwh || 0
+      const perGun = s.total_piles > 0 ? (totalKwh / s.total_piles) : 0
+      return { ...s, realPerGun: perGun, realTotalKwh: totalKwh }
     })
-    .filter((s: any) => s.yesterdayKwh > 0)
-    .sort((a: any, b: any) => b.yesterdayPerGun - a.yesterdayPerGun)
+    .filter((s: any) => s.realTotalKwh > 0)
+    .sort((a: any, b: any) => b.realPerGun - a.realPerGun)
     .slice(0, 5)
 
   return (
@@ -85,22 +86,18 @@ export default function StationList() {
       </div>
 
       {/* Real API Cumulative Totals */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <div>
           <p className="text-[12px] text-[#aeaeb2] uppercase tracking-wider">累计总营收</p>
-          <p className="text-[34px] font-bold tracking-tight mt-1">¥{(realSummary?.total_amount / 10000).toFixed(1)}<span className="text-[16px] font-normal text-[#aeaeb2] ml-1">万</span></p>
+          <p className="text-[28px] font-bold tracking-tight mt-1">¥{(realSummary?.total_amount / 10000).toFixed(1)}<span className="text-[14px] font-normal text-[#aeaeb2] ml-1">万</span></p>
         </div>
         <div>
           <p className="text-[12px] text-[#aeaeb2] uppercase tracking-wider">累计服务费</p>
-          <p className="text-[34px] font-bold tracking-tight mt-1">¥{(realSummary?.total_service_fee / 10000).toFixed(1)}<span className="text-[16px] font-normal text-[#aeaeb2] ml-1">万</span></p>
-        </div>
-        <div>
-          <p className="text-[12px] text-[#aeaeb2] uppercase tracking-wider">累计充电费</p>
-          <p className="text-[34px] font-bold tracking-tight mt-1">¥{(realSummary?.total_amount - realSummary?.total_service_fee).toLocaleString()}</p>
+          <p className="text-[28px] font-bold tracking-tight mt-1">¥{(realSummary?.total_service_fee / 10000).toFixed(1)}<span className="text-[14px] font-normal text-[#aeaeb2] ml-1">万</span></p>
         </div>
         <div>
           <p className="text-[12px] text-[#aeaeb2] uppercase tracking-wider">累计充电量</p>
-          <p className="text-[34px] font-bold tracking-tight mt-1">{(realSummary?.total_kwh / 10000).toFixed(1)}<span className="text-[16px] font-normal text-[#aeaeb2] ml-1">万度</span></p>
+          <p className="text-[28px] font-bold tracking-tight mt-1">{(realSummary?.total_kwh / 10000).toFixed(1)}<span className="text-[14px] font-normal text-[#aeaeb2] ml-1">万度</span></p>
         </div>
       </div>
 
@@ -168,10 +165,10 @@ export default function StationList() {
         )}
       </div>
 
-      {/* Yesterday Per-Gun Top 5 */}
+      {/* Per-Gun Top 5 from real API */}
       {topStations.length > 0 && (
         <div>
-          <h2 className="text-[13px] font-medium mb-3">昨日单枪充电 Top 5</h2>
+          <h2 className="text-[13px] font-medium mb-3">累计单枪充电 Top 5</h2>
           <div className="space-y-1.5">
             {topStations.map((s: any, i: number) => (
               <button key={s.id} onClick={() => navigate(`/station/${s.id}`)}
@@ -183,8 +180,8 @@ export default function StationList() {
                   <p className="text-[11px] text-[#aeaeb2]">{s.city} · {s.total_piles}枪</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[15px] font-semibold tabular-nums">{s.yesterdayPerGun}<span className="text-[11px] font-normal text-[#aeaeb2]">度/枪</span></p>
-                  <p className="text-[10px] text-[#c0c0c0]">{s.yesterdayKwh.toLocaleString()}度</p>
+                  <p className="text-[15px] font-semibold tabular-nums">{Math.round(s.realPerGun).toLocaleString()}<span className="text-[11px] font-normal text-[#aeaeb2]">度/枪</span></p>
+                  <p className="text-[10px] text-[#c0c0c0]">{(s.realTotalKwh / 10000).toFixed(1)}万度</p>
                 </div>
               </button>
             ))}
