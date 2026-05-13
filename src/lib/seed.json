@@ -46,7 +46,12 @@
       "yesterday_kwh": 2097,
       "yesterday_avg_per_gun": 299.6,
       "latest_avg_per_gun": 192.7,
-      "latest_kwh": 1349
+      "latest_kwh": 1349,
+      "real_total_kwh": 77792.39,
+      "real_service_fee": 5333,
+      "real_total_amount": 63689.79,
+      "real_sessions": 2720,
+      "real_orders": 2795
     },
     {
       "id": "002",
@@ -94,7 +99,12 @@
       "yesterday_kwh": 2962,
       "yesterday_avg_per_gun": 423.1,
       "latest_avg_per_gun": 276.9,
-      "latest_kwh": 1938
+      "latest_kwh": 1938,
+      "real_total_kwh": 334853.643,
+      "real_service_fee": 52247.71,
+      "real_total_amount": 296219.77,
+      "real_sessions": 13673,
+      "real_orders": 13922
     },
     {
       "id": "003",
@@ -142,7 +152,12 @@
       "yesterday_kwh": 2181,
       "yesterday_avg_per_gun": 311.6,
       "latest_avg_per_gun": 318.1,
-      "latest_kwh": 2227
+      "latest_kwh": 2227,
+      "real_total_kwh": 230614.338,
+      "real_service_fee": 22225.42,
+      "real_total_amount": 192217.25,
+      "real_sessions": 8348,
+      "real_orders": 8526
     },
     {
       "id": "004",
@@ -190,7 +205,12 @@
       "yesterday_kwh": 2635,
       "yesterday_avg_per_gun": 376.4,
       "latest_avg_per_gun": 282.4,
-      "latest_kwh": 1977
+      "latest_kwh": 1977,
+      "real_total_kwh": 76833.695,
+      "real_service_fee": 10772.34,
+      "real_total_amount": 66561.51,
+      "real_sessions": 3014,
+      "real_orders": 3102
     },
     {
       "id": "005",
@@ -238,7 +258,12 @@
       "yesterday_kwh": 2121,
       "yesterday_avg_per_gun": 303,
       "latest_avg_per_gun": 355.7,
-      "latest_kwh": 2490
+      "latest_kwh": 2490,
+      "real_total_kwh": 313388.022,
+      "real_service_fee": 47175.62,
+      "real_total_amount": 276201.39,
+      "real_sessions": 11446,
+      "real_orders": 11671
     },
     {
       "id": "006",
@@ -286,7 +311,12 @@
       "yesterday_kwh": 2212,
       "yesterday_avg_per_gun": 316,
       "latest_avg_per_gun": 237.9,
-      "latest_kwh": 1665
+      "latest_kwh": 1665,
+      "real_total_kwh": 308025.169,
+      "real_service_fee": 23049.91,
+      "real_total_amount": 251305.16,
+      "real_sessions": 11938,
+      "real_orders": 12220
     },
     {
       "id": "007",
@@ -334,7 +364,12 @@
       "yesterday_kwh": 2442,
       "yesterday_avg_per_gun": 174.4,
       "latest_avg_per_gun": 148.7,
-      "latest_kwh": 2082
+      "latest_kwh": 2082,
+      "real_total_kwh": 58949,
+      "real_service_fee": 4800.28,
+      "real_total_amount": 49024.91,
+      "real_sessions": 2097,
+      "real_orders": 2182
     },
     {
       "id": "008",
@@ -382,7 +417,12 @@
       "yesterday_kwh": 4423,
       "yesterday_avg_per_gun": 158,
       "latest_avg_per_gun": 165,
-      "latest_kwh": 4620
+      "latest_kwh": 4620,
+      "real_total_kwh": 49598.71,
+      "real_service_fee": 5938.79,
+      "real_total_amount": 29663.55,
+      "real_sessions": 1597,
+      "real_orders": 1630
     },
     {
       "id": "009",
@@ -6925,5 +6965,6 @@
     "total_amount": 1466376.5799999998,
     "total_sessions": 66753,
     "station_count": 20
-  }
+  },
+  "using_real_data": true
 }
