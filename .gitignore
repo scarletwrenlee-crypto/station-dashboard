@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+.DS_Store
+每日数据/
+每月收支还款详情/
+问题收集/
