@@ -6835,7 +6835,7 @@
       "service_fee": 52247.71,
       "total_amount": 296219.77,
       "sessions": 13673,
-      "all_orders": 13921,
+      "all_orders": 13922,
       "charge_fee": 243972.06
     },
     "茂电·电泡泡永富路超充站（华为超充技术支持）": {
@@ -6863,12 +6863,12 @@
       "charge_fee": 169991.83
     },
     "茂电·电泡泡孔巷路超充站（华为超充技术支持）": {
-      "total_kwh": 58905.88,
-      "service_fee": 4795.54,
-      "total_amount": 48987.83,
-      "sessions": 2096,
+      "total_kwh": 58949,
+      "service_fee": 4800.28,
+      "total_amount": 49024.91,
+      "sessions": 2097,
       "all_orders": 2182,
-      "charge_fee": 44192.29
+      "charge_fee": 44224.63
     },
     "茂电·电泡泡张浦中学超充站（华为超充技术支持）": {
       "total_kwh": 76833.695,
@@ -6894,86 +6894,6 @@
       "all_orders": 2795,
       "charge_fee": 58356.79
     },
-    "茂电·常州市第五中学超充站（华为超充技术支持）": {
-      "total_kwh": 41768.208,
-      "service_fee": 6534.47,
-      "total_amount": 26520.56,
-      "sessions": 1287,
-      "all_orders": 1307,
-      "charge_fee": 19986.09
-    },
-    "茂电•电泡泡泡晨风路超充站（华为超充技术支持）": {
-      "total_kwh": 37996.26,
-      "service_fee": 5531.63,
-      "total_amount": 27362.16,
-      "sessions": 1492,
-      "all_orders": 1510,
-      "charge_fee": 21830.53
-    },
-    "茂电•电泡泡峨眉路超充站（华为超充技术支持）": {
-      "total_kwh": 32259.02,
-      "service_fee": 4577.43,
-      "total_amount": 22950.73,
-      "sessions": 1255,
-      "all_orders": 1262,
-      "charge_fee": 18373.3
-    },
-    "茂电•电泡泡碧水家园超充站（华为超充技术支持）": {
-      "total_kwh": 41838.94,
-      "service_fee": 2779.85,
-      "total_amount": 34161.15,
-      "sessions": 1754,
-      "all_orders": 1812,
-      "charge_fee": 31381.3
-    },
-    "茂电•电泡泡和合公园超充站（华为超充技术支持）": {
-      "total_kwh": 39848.55,
-      "service_fee": 2762.92,
-      "total_amount": 32651.37,
-      "sessions": 1543,
-      "all_orders": 1606,
-      "charge_fee": 29888.45
-    },
-    "茂电•电泡泡陆家艺体中心超充站（华为超充技术支持）": {
-      "total_kwh": 34706.75,
-      "service_fee": 2639.85,
-      "total_amount": 28671.56,
-      "sessions": 1524,
-      "all_orders": 1590,
-      "charge_fee": 26031.71
-    },
-    "茂电•电泡泡秀水雅苑超充站（华为超充技术支持）": {
-      "total_kwh": 37042.03,
-      "service_fee": 4840.26,
-      "total_amount": 27640.95,
-      "sessions": 1543,
-      "all_orders": 1568,
-      "charge_fee": 22800.69
-    },
-    "茂电•昆太路长江路超充站（华为超充技术支持）": {
-      "total_kwh": 23306.61,
-      "service_fee": 1230.49,
-      "total_amount": 18711.34,
-      "sessions": 841,
-      "all_orders": 861,
-      "charge_fee": 17480.85
-    },
-    "茂电•电泡泡昆山市巴城镇正仪步行街东侧停车场充电场站（华为超充技术支持）": {
-      "total_kwh": 22705.51,
-      "service_fee": 935.66,
-      "total_amount": 17965.84,
-      "sessions": 947,
-      "all_orders": 992,
-      "charge_fee": 17030.18
-    },
-    "昆山陆家教堂北路超充站": {
-      "total_kwh": 5314.39,
-      "service_fee": 1147.11,
-      "total_amount": 4707.85,
-      "sessions": 224,
-      "all_orders": 227,
-      "charge_fee": 3560.74
-    },
     "茂电·电泡泡昆山奥莱超充站（华为超充技术支持）": {
       "total_kwh": 2311.63,
       "service_fee": 399.5,
@@ -6981,22 +6901,6 @@
       "sessions": 85,
       "all_orders": 89,
       "charge_fee": 1451.95
-    },
-    "茂电•电泡泡无锡恒享佳大厦超充站（华为超充技术支持）": {
-      "total_kwh": 2000.99,
-      "service_fee": 353.29,
-      "total_amount": 1486.31,
-      "sessions": 99,
-      "all_orders": 106,
-      "charge_fee": 1133.02
-    },
-    "陆家镇体育馆站": {
-      "total_kwh": 559.198,
-      "service_fee": 157.48,
-      "total_amount": 532.13,
-      "sessions": 25,
-      "all_orders": 26,
-      "charge_fee": 374.65
     },
     "茂电·电泡泡陆家教堂北路停车场充电站(华为超充技术支持)": {
       "total_kwh": 0,
@@ -7016,10 +6920,10 @@
     }
   },
   "real_summary": {
-    "total_kwh": 2429773.17,
-    "total_service_fee": 302089.67000000004,
-    "total_amount": 1954093.5200000003,
-    "total_sessions": 90152,
-    "station_count": 40
+    "total_kwh": 1791403.157,
+    "total_service_fee": 210366.50999999998,
+    "total_amount": 1466376.5799999998,
+    "total_sessions": 66753,
+    "station_count": 20
   }
 }
