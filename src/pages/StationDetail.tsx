@@ -41,8 +41,9 @@ export default function StationDetail() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-3">
         <StatCard label="总枪数" value={station.total_piles.toString()} />
+        <StatCard label="枪均充电量" value={trend.length > 0 ? (trend.reduce((s, d) => s + d.total_kwh, 0) / trend.length / (station.total_piles || 1)).toFixed(1) : '—'} unit="度/天" />
         <StatCard label="快充" value={station.fast_piles.toString()} sub={station.max_power} />
         <StatCard label="超充" value={station.super_piles.toString()} sub="液冷" />
       </div>
@@ -95,10 +96,10 @@ export default function StationDetail() {
   )
 }
 
-function StatCard({ label, value, sub }: { label: string; value: string; sub?: string }) {
+function StatCard({ label, value, sub, unit }: { label: string; value: string; sub?: string; unit?: string }) {
   return (
     <div className="bg-white border border-[#e8e8e8] rounded-md p-3.5 text-center">
-      <p className="text-xl font-medium">{value}</p>
+      <p className="text-xl font-medium">{value}{unit && <span className="text-[11px] font-normal text-[#9b9b9b] ml-0.5">{unit}</span>}</p>
       <p className="text-[11px] text-[#9b9b9b] mt-0.5">{label}</p>
       {sub && <p className="text-[10px] text-[#c0c0c0]">{sub}</p>}
     </div>
