@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getStations, getYesterdayStats } from '../lib/localData'
-import { Search, ChevronLeft, ChevronRight, Zap, TrendingUp, Activity, Battery, Sun, Layers } from 'lucide-react'
+import { Search, ChevronLeft, ChevronRight, Zap, TrendingUp, Activity, Sun, Layers } from 'lucide-react'
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, getDay, isToday, addMonths, subMonths } from 'date-fns'
 
 const WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
@@ -127,10 +127,10 @@ export default function StationList() {
           <p className="text-[10px] text-[#c0c0c0] mt-0.5">雨棚+休息室配齐率</p>
         </div>
         <div className="bg-white rounded-2xl p-4 text-center" style={{ boxShadow: '0 0 0 0.5px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04)' }}>
-          <Battery size={20} strokeWidth={1.5} className="mx-auto mb-2 text-[#1a1a1a]" />
-          <p className="text-lg font-semibold">600<span className="text-[12px] font-normal text-[#aeaeb2]">kW</span></p>
-          <p className="text-[11px] text-[#aeaeb2] mt-0.5">华为液冷</p>
-          <p className="text-[10px] text-[#c0c0c0] mt-0.5">故障率↓60% · 能效97%+</p>
+          <Activity size={20} strokeWidth={1.5} className="mx-auto mb-2 text-[#1a1a1a]" />
+          <p className="text-lg font-semibold">¥{(realSummary?.total_amount / 10000).toFixed(1)}<span className="text-[12px] font-normal text-[#aeaeb2]">万</span></p>
+          <p className="text-[11px] text-[#aeaeb2] mt-0.5">累计总营收</p>
+          <p className="text-[10px] text-[#c0c0c0] mt-0.5">充电费+服务费</p>
         </div>
       </div>
 
